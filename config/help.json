@@ -1,0 +1,66 @@
+{
+  "help": {
+    "shortDescription": "Learn about all commands or a specific command",
+    "description": "View the complete list of commands available in the Pengauthor Discord bot. Optionally, you can also look up a command for which you specifically need information about.",
+    "args": [{
+      "command": "The command to specifically seek help about; ignore to see the list of commands",
+      "ephemeral": "(Slash command only) Switch the response's visibility between you and everyone"
+    }]
+  },
+  "tip": {
+    "subcommands": ["reporters", "editors"],
+    "shortDescription": "Get a random piece of advice",
+    "description": "Get a random piece of advice with respect to reporting and writing. There are two kinds of tips — for reporters and for editors. The two different roles have different tips associated with them. Even if you don't belong to the specific role, you can access its related tips. In addition, the tips suggested use the same lists linked with the daily Tips of the Day.",
+    "args": [{
+      "ephemeral": "Slash command only: Switch the response's visibility between you or and everyone"
+    }]
+  },
+  "pengauthor": {
+    "shortDescription": "Get a direct link to the Pengauthor dashboard",
+    "description": "Get a direct link to the Pengauthor dashboard. This link does not require you to input a password to access the site.",
+    "args": [{
+      "page": "The dashboard page to directly fetch the link for",
+      "ephemeral": "Slash command only: Switch the response's visibility between you or and everyone"
+    }]
+  },
+  "dictionary": {
+    "shortDescription": "Look up a word from the English language",
+    "description": "Look up a word or phrase using Wikitionary, a credible online dictionary. This tool also shows synonyms and example usage. Only information of words used in English literature should be obtainable.",
+    "args": [{
+      "_word": "An English word or phrase to look up",
+      "ephemeral": "Slash command only: Switch the response's visibility between you or and everyone"
+    }]
+  },
+  "research": {
+    "shortDescription": "Search an army media website for published posts",
+    "description": "Search an army media organization website for published posts using its native search functionality. Results can be filtered by year or year range and sorted by publication date or post title.",
+    "args": [{
+      "_search": "Search on army media websites exactly like how you would use site search",
+      "_source": "The media organization website to search from",
+      "range": "Limit results to a specific year or year range (20XX or 20XX-20YY)",
+      "sort": "Choose how to sort the search results",
+      "ephemeral": "Slash command only: Switch the response's visibility between you or and everyone"
+    }]
+  },
+  "ping": {
+    "shortDescription": "Test if the bot is responding and get its response latency",
+    "description": "Get the execution speed of the Pengauthor Discord bot in milliseconds. To complete this test, the bot will attempt to edit its own message. The time taken to complete the edit operation is given in milliseconds.",
+    "args": [{
+      "ephemeral": "Slash command only: Switch the response's visibility between you or and everyone"
+    }]
+  },
+  "schedule": {
+    "shortDescription": "For Reporting Heads: Schedules and announces a new post",
+    "description": "**For Reporting Heads only!** Schedules a post by channeling it on Discord and registering the post information internally. Scheduling a post will activate daily reminders for the post when claimed.",
+    "args": [{
+      "_title": "Sets the title of the post; can be tentative",
+      "_due": "Sets the deadline of the post; must follow DD-MM format; the year is automatically determined",
+      "_boilerplate": "Tells the type of post you're scheduling; will be recommended to the author of the post for Pengauthor boilerplate generation",
+      "_thumbnail": "Tells the thumbnail to use for the post; can be an image URL or a thumbnail name; accepts \"TBD\" if the thumbnail has been requested",
+      "note": "Links the post to a Pengauthor-hosted note; accepts the note URL or the 4-character code; case-sensitive",
+      "covered_by": "Sets the author of the post; useful if the author of the post is already known",
+      "message": "Appends a custom message to the end of the post schedule; has markdown support",
+      "ephemeral": "Switch the response's visibility between you or and everyone"
+    }]
+  }
+}
