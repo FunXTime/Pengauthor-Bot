@@ -8,12 +8,12 @@
   "schedulePings": "<@&992455163732299776> <@&988518151052492821> <@&1154095882480918529> <@&991798547261427794>",
   "reminders": [
     {
-      "channelId": "1545442151914283118",
+      "channelId": "988522030771109946",
       "schedule": "30 0 8 * * *",
       "special": "tips for reporters"
     },
     {
-      "channelId": "1543497562450034758",
+      "channelId": "1470121107683283115",
       "schedule": "30 0 8 * * *",
       "special": "tips for editors"
     },

@@ -2,7 +2,7 @@ import {
   getResearchState, getResearchPage, createResearchReply
 } from "../lib/research.js";
 import {
-  container, emoji, commandMention, text
+  MessageFlags, container, emoji, commandMention, text
 } from "../lib/components.js";
 
 export default async function research(interaction) {

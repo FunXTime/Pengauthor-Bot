@@ -1,3 +1,6 @@
+import { startServer } from './server.js';
+startServer();
+
 import { Client, Collection, GatewayIntentBits } from "discord.js";
 import commands from "./commands/index.js";
 import registerEvents from "./events/index.js";
