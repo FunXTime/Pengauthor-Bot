@@ -28,7 +28,10 @@ export default {
       const reply = {
         components: [
           container(
-            text(`${emoji("Error")} **Oh no, an unexpected error!** You might want to report this to Fun X Time.`)
+            text(
+              `${emoji("Error")} **Oh no, an unexpected error!** You might want to report this to Fun X Time.\n`
+            + `**Details:** \`${error.message}\``
+            )
           )
         ],
         flags: MessageFlags.IsComponentsV2 | MessageFlags.Ephemeral
