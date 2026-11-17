@@ -7,7 +7,8 @@ import config from "../config/index.js";
 
 const entities = {
   ...config.armyColors,
-  ...config.organizationColors
+  ...config.organizationColors,
+  ...config.departmentColors
 };
 
 const findEntity = (query) => {
@@ -29,10 +30,10 @@ const getForeground = (hex) => {
 export default {
   data: new SlashCommandBuilder()
     .setName("color")
-    .setDescription("Get the color of an army or organization")
+    .setDescription("Get the color of entity: an army, an organization, or a department")
     .addStringOption((option) => option
       .setName("entity")
-      .setDescription("The army or organization to get the color of")
+      .setDescription("The name of the entity to get the color of")
       .setAutocomplete(true)
       .setRequired(true)
     )
@@ -60,7 +61,7 @@ export default {
           container(
             text(
               `${emoji("Error")} **Unknown entity!**\n`
-              + `No army or organization named \`${entity || "unknown"}\` could be found.`
+            + `No army, organization, or department named \`${entity || "unknown"}\` could be found.`
             )
           )
         ],

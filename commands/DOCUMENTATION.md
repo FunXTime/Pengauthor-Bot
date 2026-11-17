@@ -18,7 +18,7 @@ export default {
     .setName("")                  // Set the name of the slash command
     .setDescription("")           // Set the description of the slash command
     /* Optional: Further add options for the slash command here */,
-  messageCommands: [ "", "" ], // Add "messageCommands" to support message command and aliases
+  messageCommands: [ "", "" ],    // Add "messageCommands" to support message command and aliases
 
   // Add this "autocomplete" method if autocompletion is supported
   async execute({ interaction }) {

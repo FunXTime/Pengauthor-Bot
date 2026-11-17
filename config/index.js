@@ -10,6 +10,7 @@ import boilerplates from "./boilerplates.json" with { type: "json" };
 import devOverrides from "./dev-overrides.json" with { type: "json" };
 import armyColors from "./colors/armies.json" with { type: "json" };
 import organizationColors from "./colors/organizations.json" with { type: "json" };
+import departmentColors from "./colors/departments.json" with { type: "json" };
 import colorMappings from "./colors/mappings.json" with { type: "json" };
 
 const useDevOverrides = process.env.DEVELOPMENT_MODE?.toLowerCase() === "true";
@@ -23,6 +24,7 @@ const config = {
   research,
   armyColors,
   organizationColors,
+  departmentColors,
   colorMappings,
 
   ...main,
@@ -34,7 +36,8 @@ const config = {
     url: process.env.SUPABASE_URL,
     secretKey: process.env.SUPABASE_SECRET_KEY
   },
-  logTimestamps: process.env.LOG_TIMESTAMPS?.toLowerCase() === "true"
+  logTimestamps: process.env.LOG_TIMESTAMPS?.toLowerCase() === "true",
+  usingDevOverrides: useDevOverrides,
 };
 
 for (const [name, value] of Object.entries({

@@ -1,3 +1,4 @@
+import config from "../config/index.js";
 import { Events } from "discord.js";
 import { handleInteraction } from "../interactions/index.js";
 import {
@@ -9,7 +10,10 @@ export default {
   name: Events.InteractionCreate,
 
   async execute(interaction) {
-    const command = interaction.client.commands.get(interaction.commandName);
+    const commandName = config.usingDevOverrides
+      ? interaction.commandName?.replace(/^try-/, "")
+      : interaction.commandName;
+    const command = interaction.client.commands.get(commandName);
 
     if (interaction.isButton()) return await handleInteraction(interaction);
     else if (interaction.isAutocomplete()) {
@@ -30,7 +34,7 @@ export default {
           container(
             text(
               `${emoji("Error")} **Oh no, an unexpected error!** You might want to report this to Fun X Time.\n`
-            + `**Details:** \`${error.message}\``
+            + `-# **Details:** \`${error.message}\``
             )
           )
         ],
